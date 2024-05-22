@@ -22,6 +22,11 @@ Or:
 ```py
 pip install -r requirements.txt
 ```
+
+>If you are on Windows and you can't install getkey, you might want to get it from here: https://github.com/li-rupert/getkey
+>
+>Simply clone the repo and run `python setup.py install`
+
 Then you can run the program:
 ```py
 python main.py
