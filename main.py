@@ -19,14 +19,14 @@ num1 = 0
 num2 = 0
 score = 0
 
-os.system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')
 
 def restart_program():
   python = sys.executable
   os.execl(python, python, * sys.argv)
 
 def timed():
-  os.system('cls')
+  os.system('cls' if os.name == 'nt' else 'clear')
   try:
 	  timer = int(input("Timer length in seconds: "))
   except ValueError:
@@ -49,7 +49,7 @@ def timed():
   end = time.time()
 
   while (start - end) > 0:
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(f"You have {round(start - end)}s remaining")
     global question
     question = question + 1
@@ -100,7 +100,7 @@ def infinite():
 	  max = int(input("Maximum number: "))
 
   while True:
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     global question
     question = question + 1
     global num1
@@ -131,31 +131,31 @@ def infinite():
   print("\nTotal score: " + str(score) + "\n")
 
 def tutorial():
-  os.system('cls')
+  os.system('cls' if os.name == 'nt' else 'clear')
   tut = int(input("Choose the gamemode you'd like a tutorial for:\n1. Timed\n2. Infinite\n"))
   
   if tut == 1:
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("This is the tutorial for Timed Mode\n\n")
     input("Press Enter to continue...")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("'Timer length in seconds:'\n\nChoose how long you'd want the timer for the quiz to be in seconds (Example: 60 = 60 seconds)\n\n")
     input("Press Enter to continue...")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("'Minimum number:'\n'Maximum number:'\n\nChoose the range of numbers you'd want the quiz to randomly pick numbers from (Example: Minimum = 1, Maximum = 10)\n\n")
     input("Press Enter to continue...")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("Simply type the answers to each question\n\nCorrect answers = 1 point\nWrong answers = 0 points and goes to the next question\nNo input would just skip the question\n\nWhen the time is up, the game will show your score\n\n")
     print("That's the end of Timed Mode tutorial!\n\nPress Enter to go back to the main menu")
 
   if tut == 2:
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("This is the tutorial for Infinite Mode\n\n")
     input("Press Enter to continue...")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("'Minimum number:'\n'Maximum number:'\n\nChoose the range of numbers you'd want the quiz to randomly pick numbers from (Example: Minimum = 1, Maximum = 10)\n\n")
     input("Press Enter to continue...")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("Simply type the answers to each question\n\nCorrect answers = 1 point\nWrong answers and no input would end the game and show your score\n\n")
     print("That's the end of Infinite Mode tutorial!\n\nPress Enter to go back to the main menu")
     
