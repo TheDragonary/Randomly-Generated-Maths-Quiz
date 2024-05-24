@@ -31,8 +31,3 @@ Then you can run the program:
 ```py
 python main.py
 ```
-
-# Running on Linux
-Edit the Python file and change every instance of "cls" to "clear".
-
-"cls" is a Windows thing to clear the terminal, I don't know why it doesn't work with "clear".
